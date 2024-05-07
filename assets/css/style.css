@@ -1,0 +1,87 @@
+
+
+:root {
+    --primary-color: #37b5a3;
+    --secondary-color: #c9f4ec;
+    --text-color: #ede1c0;
+    
+    }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Monsterrat', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    align-self: center;
+    margin: 0.5rem;
+    float: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.header_div {
+    position: relative;
+    display: block;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 1px ;
+    background:linear-gradient(to right, #c9f4ec, #37b5a3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0rem 0 5rem 0rem;
+    -webkit-border-radius: 0rem 0 5rem 0rem;
+    -moz-border-radius: 0rem 0 5rem 0rem;
+    -ms-border-radius: 0rem 0 5rem 0rem;
+    -o-border-radius: 0rem 0 5rem 0rem;
+}
+
+.menu_nav {
+    display: flex;
+    float: right;
+    margin-top: 0vh;
+    margin: 0;
+    padding: 0.5rem;
+    margin-right: 2rem;
+   
+}
+
+.menu_nav li {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: self-start
+      
+    
+}
+
+.menu_nav li a {
+    display: flex;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    font-size: 15px;
+    font-weight: bold;
+    align-items: center;
+     margin-left: 0.5rem;
+     justify-content: center;
+}
+
+span {
+    margin-left: 0.5rem;
+}

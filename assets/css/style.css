@@ -85,3 +85,34 @@ body {
 span {
     margin-left: 0.5rem;
 }
+
+
+    .barner 
+    {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: whitesmoke;
+    }
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    h1 {
+         
+        font-size: 120px;
+        text-align: center;
+        font-weight: 400;
+        mix-blend-mode: overlay;
+        
+       
+    }
+
+    

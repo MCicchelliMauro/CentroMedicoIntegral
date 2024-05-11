@@ -45,28 +45,39 @@ a {
 
 button {
   border-radius: 20px;
-  border: 1px solid #37b5a3;
+  border: 1px solid #37b5a7;
   background-color: #37b5a3;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
   padding: 12px 45px;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
+ 
+  
+}
+button.login {
+  
+  transition: box-shadow 258ms ease-out 102ms;
+  -webkit-transition: box-shadow 258ms ease-out 102ms;
+  -moz-transition: box-shadow 258ms ease-out 102ms;
+  -ms-transition: box-shadow 258ms ease-out 102ms;
+  -o-transition: box-shadow 258ms ease-out 102ms;
+}
+button.login:hover {
+  box-shadow: inset 0px 0px 56px 0px rgba(0, 0, 0, 0.3);
 }
 
-button:active {
-  transform: scale(0.95);
-}
-
-button:focus {
-  outline: none;
-}
-
-button.ghost {
+button.sing-up {
   background-color: transparent;
   border-color: #ffffff;
+  transition: box-shadow 258ms ease-out 102ms;
+  -webkit-transition: box-shadow 258ms ease-out 102ms;
+  -moz-transition: box-shadow 258ms ease-out 102ms;
+  -ms-transition: box-shadow 258ms ease-out 102ms;
+  -o-transition: box-shadow 258ms ease-out 102ms;
+}
+button.sing-up:hover {
+  box-shadow: inset 0px 0px 56px 0px rgba(0, 0, 0, 0.3);
 }
 
 form {
@@ -130,9 +141,6 @@ input {
   z-index: 100;
 }
 
-.container.right-panel-active .overlay-container {
-  transform: translateX(-100%);
-}
 
 .overlay {
   background: #37b5a3;
@@ -146,13 +154,9 @@ input {
   left: -100%;
   height: 100%;
   width: 200%;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
+  
 }
 
-.container.right-panel-active .overlay {
-  transform: translateX(50%);
-}
 
 .overlay-panel {
   position: absolute;
@@ -165,17 +169,10 @@ input {
   top: 0;
   height: 100%;
   width: 50%;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
+  
 }
 
-.overlay-left {
-  transform: translateX(-20%);
-}
 
-.container.right-panel-active .overlay-left {
-  transform: translateX(0);
-}
 
 .overlay-right {
   right: 0;
@@ -201,27 +198,4 @@ input {
   width: 40px;
 }
 
-footer {
-  background-color: #222;
-  color: #fff;
-  font-size: 14px;
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 999;
-}
 
-footer p {
-  margin: 10px 0;
-}
-
-footer i {
-  color: red;
-}
-
-footer a {
-  color: #3c97bf;
-  text-decoration: none;
-}

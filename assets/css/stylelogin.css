@@ -105,6 +105,15 @@ button:hover{
   cursor: pointer;
 }
 
+#agree{
+  width: 13px;
+  height: 13px;
+}
+
+#formRegister label{
+  font-size: 12px;
+}
+
 .register-account h2{
   margin: 5vw 0 0 0;
 }

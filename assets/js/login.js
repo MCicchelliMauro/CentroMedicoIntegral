@@ -24,15 +24,16 @@ inputDni.addEventListener("keypress", function (e) {
 let btnAccount = document.querySelector("#btnAccount");
 let passw1 = document.querySelector("#passw1");
 let passw2 = document.querySelector("#passw2");
+let checkBox = document.querySelector("#agree");
 passw2.addEventListener("input", () => {
-  if (passw1.value == passw2.value) {
-    btnAccount.innerHTML = `<i class="fa-solid fa-check"></i>`
+  if (passw1.value == passw2.value && checkBox.checked) {
+    btnAccount.innerHTML = `<i class="fa-solid fa-check"></i>`;
   }else{
-    btnAccount.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+    btnAccount.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
     
     //registro exitoso
     document.querySelector("#formRegister").addEventListener("submit", (e) => {
-      e.preventDefault;
+      e.preventDefault();
       document.querySelector(".register-account").classList.add("hidden");
       document.querySelector(".success").classList.remove("hidden");
     });

@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script src="https://kit.fontawesome.com/3e00fe1c2c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../assets/css/stylelogin.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/3e00fe1c2c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../assets/css/stylelogin.css" />
     <title>Ingreso/Registro</title>
-</head>
-<body>
-    <div class="container">
-		
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Ingresar</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google"></i></a>
-				
-			</div>
-			<span>o usa tu correo</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Contraseña	" />
-			<a href="#">¿Olvidaste tu contraseña?</a>
-			<button class="login">INGRESAR</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			
-			<div class="overlay-panel overlay-right">
-				<h1>Hola!</h1>
-				<p>Crea una cuenta para solicitar turnos</p>
-				<button class="sing-up" >REGISTRATE</button>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- form ingreso -->
+      <div class="form-container sign-in-container start">
+        <form action="">
+          <h1>Ingresar</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google"></i></a>
+          </div>
+          <span>o usa tu correo</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Contraseña	" />
+            <span id="spanRecover">¿Olvidaste tu contraseña?</span>
+            <button>Ingresar</button>
+        </form>
+      </div>
+<!-- form recuperar contraseña -->
+      <div class="form-container sign-in-container recover hidden">
+        <form action="">
+          <h2>Recuperar contraseña</h2>
+            <input type="email" placeholder="Email" />
+            <span>Enviaremos un link para recuperar tu contraseña</span>
+            <button>Enviar</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+<!-- mensaje saludo -->
+          <div class="overlay-panel overlay-right register">
+            <h2>Hola!</h2>
+            <p>Crea una cuenta para solicitar turnos</p>
+            <button id="btnRegister" class="ghost">Registrate</button>
+          </div>
+<!-- form registro -->
+          <div class="overlay-panel overlay-right register-account hidden">
+            <h2>Registrar cuenta</h2>
+            <form id="formRegister" action="">
+              <input required type="text" placeholder="Nombre completo" />
+              <input id="regDni" required type="number" placeholder="DNI" />
+              <input required type="email" placeholder="Email" />
+              <input id="passw1" required type="password" minlength="6" maxlength="10" placeholder="Contraseña" />
+              <input id="passw2" required type="password" minlength="6" maxlength="10" placeholder="Confirmar contraseña" />
+              <button id="btnAccount" class="ghost">Finalizar</button>
+            </form>
+          </div>
+<!-- registro exitoso -->
+          <div class="overlay-panel overlay-right success hidden">
+            <h2>Bienvenido!</h2>
+            <h4>Tu cuenta fue creada con éxito</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/login.js"></script>
+  </body>
 </html>

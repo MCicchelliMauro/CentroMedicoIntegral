@@ -8,11 +8,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/3e00fe1c2c.js" crossorigin="anonymous"></script>
     <!-- !Link a hoja de estilos -->
-
+    
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>MEDIN - Centro Médico Integral</title>
 </head>
@@ -23,25 +23,19 @@
       <div class="header_div">
         <a href="./index.html">  <img class="logo" src="./assets/img/logos/logo.png" alt="logo" ></a>
             <nav class="nav">
+              <input type="checkbox" id="menu-toggle" />
+              <label for="menu-toggle" class="hamburger">&#9776;</label>
                 <ul class="menu_nav">
                                       
                     <li><a href="./html/conocenos.html">
-                      <span class="material-symbols-outlined">
-                      partner_exchange
-                      </span> Conocenos</a></li>
+                      <i class="fa-solid fa-user-doctor"></i> Conocenos</a></li>
                     <li><a href="./html/servicios.html">
-                      <span class="material-symbols-outlined">
-                      medical_services
-                      </span> Servicios</a></li>
+                      <i class="fa-solid fa-suitcase-medical"></i> Servicios</a></li>
                     <li><a href="./html/contacto.html">
-                      <span class="material-symbols-outlined">
-                      mail
-                      </span> Contacto</a></li>
+                      <i class="fa-solid fa-envelope"></i> Contacto</a></li>
                     <li>
                       <a href="./html/login.html">
-                        <span class="material-symbols-outlined">
-                        login
-                        </span> Acceso Pacientes</a>
+                        <i class="fa-solid fa-users-between-lines"></i> Acceso Pacientes</a>
                                             
                     </li>        
                   </ul> 
@@ -85,13 +79,19 @@
     </main>
 
     <footer class="footer nav">
-      <ul>
-          <li><a href="#">Enlace 1</a></li>
-          <li><a href="#">Enlace 2</a></li>
-          <li><a href="#">Enlace 3</a></li>
-          <li><a href="#">Enlace 4</a></li>
-        </ul>   
-  </footer>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="address">
+        <p>123 Main Street, Anytown, Anywhere</p>
+      </div>
+      <div class="additional-info">
+        <p>Additional info goes here...</p>
+      </div>
+    </footer>
 </div>
 </body>
 </html>

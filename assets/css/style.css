@@ -76,19 +76,70 @@ body {
     padding: 0.5rem;
     justify-content: center;
 }
-
-@media screen and (max-width: 768px) { 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    float: right;
+    font-size: 40px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: #1c3f2f;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    transition: transform 99ms ease-out 125ms;
+    -webkit-transition: transform 99ms ease-out 125ms;
+    -moz-transition: transform 99ms ease-out 125ms;
+    -ms-transition: transform 99ms ease-out 125ms;
+    -o-transition: transform 99ms ease-out 125ms;
+}
+ .hamburger:hover {
+    color: #37b5a3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background-color: #c9f4ec;
+    transition: transform 99ms ease-out 125ms;
+    -webkit-transition: transform 99ms ease-out 125ms;
+    -moz-transition: transform 99ms ease-out 125ms;
+    -ms-transition: transform 99ms ease-out 125ms;
+    -o-transition: transform 99ms ease-out 125ms;
+ }
+@media screen and (max-width: 790px) { 
     .menu_nav li a {
          display: none;
     }
 }
+
+#menu-toggle {
+    display: none; /* Oculta el checkbox */
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  
+  
+  @media (max-width: 790px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .menu_nav {
+      display: none;
+    }
+  
+    #menu-toggle:checked ~ .menu_nav {
+      display: block;
+    }
+  }
 
 .menu_nav li a {
   display: flex;
   text-decoration: none;
   color: #1c3f2f;
   padding: 0.5rem;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   align-items: center;
   margin-left: 0.5rem;
@@ -110,9 +161,9 @@ body {
     -ms-transition: transform 99ms ease-out 125ms;
     -o-transition: transform 99ms ease-out 125ms;
 }
-.material-symbols-outlined {
+.menu_nav li a i {
     margin-right: 0.5rem;
-    font-size: 40px;
+    font-size: 20px;
     color: #1c3f2f;
     opacity: 0.8;
 }
@@ -198,13 +249,21 @@ aside {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 .footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    background: linear-gradient(to right, #c9f4ec, #37b5a3);
+    justify-content: space-around;
+    padding: 1em;
     margin: 5px;
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .footer a {
+    color: #fff;
+    margin: 0 1em;
+  }
+  
+    .footer a:hover {
+        color: #37b5a3;
+    }

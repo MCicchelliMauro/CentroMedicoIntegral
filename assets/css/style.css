@@ -230,6 +230,10 @@ body {
 }
 
 aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     background: linear-gradient(to right, #c9f4ec, #37b5a3);
     padding: 1rem;
@@ -241,7 +245,7 @@ aside {
 .contenido {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+    justify-content: center;align-items: start;
     padding: 1rem;
     background-color: var(--secondary-color);
     margin: 5px;
@@ -249,21 +253,57 @@ aside {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* !Estilos del footer */
 
 .footer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 1em;
     margin: 5px;
     background-color: #333;
     color: #fff;
   }
-  
-  .footer a {
+
+  .footer i {
     color: #fff;
     margin: 0 1em;
   }
   
-    .footer a:hover {
+    .footer i:hover {
         color: #37b5a3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    .footer .div-1, .footer .div-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5em;
+        margin: 1px;
+      }
+
+    .social-media {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+
+    footer .div-1 a {
+        color: #fff;
+        margin: 0 1em;
+        text-decoration: none;
+    }
+
+    .footer .social-media a {
+        display: inline-block;
+        margin: 0 5px;
+      }

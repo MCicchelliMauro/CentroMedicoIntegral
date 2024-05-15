@@ -1,5 +1,13 @@
 "use strict";
 
+//capturar form para prevenir envio
+let forms = document.getElementsByTagName("form");
+console.log(forms);
+for (let i = 0; i < forms.length; i++) {
+  forms[i].addEventListener("submit", (e)=> 
+  e.preventDefault());
+};
+
 //recuperar contraseña
 document.querySelector("#spanRecover").addEventListener("click", () => {
   document.querySelector(".start").classList.add("hidden");
@@ -25,17 +33,19 @@ let btnAccount = document.querySelector("#btnAccount");
 let passw1 = document.querySelector("#passw1");
 let passw2 = document.querySelector("#passw2");
 let checkBox = document.querySelector("#agree");
-passw2.addEventListener("input", () => {
-  if (passw1.value == passw2.value && checkBox.checked) {
+passw2.addEventListener("input", check);
+checkBox.addEventListener("input", check);
+
+function check(){
+  if (passw1.value != "" && passw1.value == passw2.value && checkBox.checked) {
     btnAccount.innerHTML = `<i class="fa-solid fa-check"></i>`;
-  }else{
-    btnAccount.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-    
     //registro exitoso
-    document.querySelector("#formRegister").addEventListener("submit", (e) => {
+    btnAccount.addEventListener("click", (e) => {
       e.preventDefault();
       document.querySelector(".register-account").classList.add("hidden");
       document.querySelector(".success").classList.remove("hidden");
     });
+  } else {
+    btnAccount.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
   }
-});
+};

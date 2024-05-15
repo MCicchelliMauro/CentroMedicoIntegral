@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--! Links a fuentes e iconos de googleapis -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- !Link a hoja de estilos -->
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/stylecontacto.css">
+
+    <title>MEDIN - Centro Médico Integral</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header_div">
+                <a href="/index.html"> <img class="logo" src="../assets/img/logos/logo.png" alt="logo"></a>
+                <nav class="nav">
+                    <ul class="menu_nav">
+
+                        <li><a href="./html/conocenos.html">
+                                <span class="material-symbols-outlined">
+                                    partner_exchange
+                                </span> Conocenos</a></li>
+                        <li><a href="./html/servicios.html">
+                                <span class="material-symbols-outlined">
+                                    medical_services
+                                </span> Servicios</a></li>
+                        <li><a href="./html/contacto.html">
+                                <span class="material-symbols-outlined">
+                                    mail
+                                </span> Contacto</a></li>
+                        <li>
+                            <a href="./html/login.html">
+                                <span class="material-symbols-outlined">
+                                    login
+                                </span> Acceso Pacientes</a>
+
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <body>
+
+            <!-- formulario de contacto -->
+
+            <div class="contact_form">
+
+                <div class="formulario">
+                    <h1>Formulario de contacto</h1>
+                    <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+
+
+                    <form action="submeter-formulario.php" method="post">
+
+
+                        <p>
+                            <label for="nombre" class="colocar_nombre">Nombre
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                                placeholder="Escribe tu nombre">
+                        </p>
+
+                        <p>
+                            <label for="email" class="colocar_email">Email
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="email" name="introducir_email" id="email" required="obligatorio"
+                                placeholder="Escribe tu Email">
+                        </p>
+
+                        <p>
+                            <label for="telefone" class="colocar_telefono">Teléfono
+                            </label>
+                            <input type="tel" name="introducir_telefono" id="telefono"
+                                placeholder="Escribe tu teléfono">
+                        </p>
+
+                        <p>
+                            <label for="website" class="colocar_website">Sitio web
+                            </label>
+                            <input type="url" name="introducir_website" id="website"
+                                placeholder="Escribe la URL de tu web">
+                        </p>
+
+                        <p>
+                            <label for="asunto" class="colocar_asunto">Asunto
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
+                                placeholder="Escribe un asunto">
+                        </p>
+
+                        <p>
+                            <label for="mensaje" class="colocar_mensaje">Mensaje
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
+                                required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                        </p>
+
+                        <button type="submit" name="enviar_formulario" id="enviar">
+                            <p>Enviar</p>
+                        </button>
+
+                        <p class="aviso">
+                            <span class="obligatorio"> * </span>los campos son obligatorios.
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+
+        </body>
+
+</html>

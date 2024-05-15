@@ -41,7 +41,7 @@ body {
     -o-transform: translate(0px, 0px) scale(1.1, 1.1);
 }
 .header_div {
-    position: fixed;
+    position: relative;
     display: block;
     justify-content: space-between;
     align-content: space-between;

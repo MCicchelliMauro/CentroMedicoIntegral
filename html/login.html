@@ -9,10 +9,39 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../assets/css/stylelogin.css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Ingreso/Registro</title>
   </head>
   <body>
+
+    <header>
+      <div class="header_div">
+        <a href="../index.html">  <img class="logo" src="../assets/img/logos/logo.png" alt="logo" ></a>
+            <nav class="nav">
+              <input type="checkbox" id="menu-toggle" />
+              <label for="menu-toggle" class="hamburger">&#9776;</label>
+                <ul class="menu_nav">
+                                      
+                    <li><a href="../html/conocenos.html">
+                      <i class="fa-solid fa-user-doctor"></i> Conocenos</a></li>
+                    <li><a href="../html/servicios.html">
+                      <i class="fa-solid fa-suitcase-medical"></i> Servicios</a></li>
+                    <li><a href="../html/contacto.html">
+                      <i class="fa-solid fa-envelope"></i> Contacto</a></li>
+                    <li>
+                      <a href="../html/login.html">
+                        <i class="fa-solid fa-users-between-lines"></i> Acceso Pacientes</a>
+                                            
+                    </li>        
+                  </ul> 
+            </nav>
+            
+          </div>  
+               
+    </header>
+    <main>
     <div class="container" id="container">
+      
       <!-- form ingreso -->
       <div class="form-container sign-in-container start">
         <form action="">
@@ -67,5 +96,27 @@
       </div>
     </div>
     <script src="../assets/js/login.js"></script>
+  
+  <footer class="footer nav">
+    <div class="div-1">
+      <p>Superintendencia de Servicios de Salud. Órgano de control | 0800 222 SALUD (72583) | <a
+          href="https://www.argentina.gob.ar/sssalud" target="_blank">www.sssalud.gob.ar</a> | N° de Inscripción
+        RNEMP: 2222</p>
+    </div>
+    <div class="div-2">
+      <p>Seguinos en nuestras redes</p>
+      <section class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </section>
+      <section class="address">
+        <p>Tucumán 451, Ciudad Autónoma de Buenos Aires, Argentina</p>
+        <p>© 2021 MEDIN - Centro Médico Integral</p>
+      </section>
+    </div>
+  </footer>
+</main>
   </body>
 </html>

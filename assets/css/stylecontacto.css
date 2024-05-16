@@ -1,3 +1,9 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
 .contact_form{  
     display: flex;
     width: 460px; 
@@ -118,3 +124,9 @@ p{
     
 }
 
+footer p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}

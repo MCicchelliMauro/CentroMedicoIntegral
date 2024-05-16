@@ -9,11 +9,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/3e00fe1c2c.js" crossorigin="anonymous"></script>
+    
 
 
     <!-- !Link a hoja de estilos -->
@@ -21,44 +20,39 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/stylecontacto.css">
 
-    <title>MEDIN - Centro Médico Integral</title>
+    <title>MEDIN - Contacto</title>
 </head>
 
 <body>
 
-    <div class="container">
+    
         <header>
             <div class="header_div">
-                <a href="/index.html"> <img class="logo" src="../assets/img/logos/logo.png" alt="logo"></a>
-                <nav class="nav">
-                    <ul class="menu_nav">
+              <a href="../index.html">  <img class="logo" src="../assets/img/logos/logo.png" alt="logo" ></a>
+                  <nav class="nav">
+                    <input type="checkbox" id="menu-toggle" />
+                    <label for="menu-toggle" class="hamburger">&#9776;</label>
+                      <ul class="menu_nav">
+                                            
+                          <li><a href="../html/conocenos.html">
+                            <i class="fa-solid fa-user-doctor"></i> Conocenos</a></li>
+                          <li><a href="../html/servicios.html">
+                            <i class="fa-solid fa-suitcase-medical"></i> Servicios</a></li>
+                          <li><a href="../html/contacto.html">
+                            <i class="fa-solid fa-envelope"></i> Contacto</a></li>
+                          <li>
+                            <a href="../html/login.html">
+                              <i class="fa-solid fa-users-between-lines"></i> Acceso Pacientes</a>
+                                                  
+                          </li>        
+                        </ul> 
+                  </nav>
+                  
+                </div>  
+                     
+          </header>
 
-                        <li><a href="./html/conocenos.html">
-                                <span class="material-symbols-outlined">
-                                    partner_exchange
-                                </span> Conocenos</a></li>
-                        <li><a href="./html/servicios.html">
-                                <span class="material-symbols-outlined">
-                                    medical_services
-                                </span> Servicios</a></li>
-                        <li><a href="./html/contacto.html">
-                                <span class="material-symbols-outlined">
-                                    mail
-                                </span> Contacto</a></li>
-                        <li>
-                            <a href="./html/login.html">
-                                <span class="material-symbols-outlined">
-                                    login
-                                </span> Acceso Pacientes</a>
-
-                        </li>
-                    </ul>
-                </nav>
-
-            </div>
-        </header>
-
-        <body>
+        
 
             <!-- formulario de contacto -->
 
@@ -129,6 +123,27 @@
                     </form>
                 </div>
             </div>
+
+            <footer class="footer nav">
+                <div class="div-1">
+                  <p>Superintendencia de Servicios de Salud. Órgano de control | 0800 222 SALUD (72583) | <a
+                      href="https://www.argentina.gob.ar/sssalud" target="_blank">www.sssalud.gob.ar</a> | N° de Inscripción
+                    RNEMP: 2222</p>
+                </div>
+                <div class="div-2">
+                  <p>Seguinos en nuestras redes</p>
+                  <section class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </section>
+                  <section class="address">
+                    <p>Tucumán 451, Ciudad Autónoma de Buenos Aires, Argentina</p>
+                    <p>© 2021 MEDIN - Centro Médico Integral</p>
+                  </section>
+                </div>
+              </footer>
 
         </body>
 

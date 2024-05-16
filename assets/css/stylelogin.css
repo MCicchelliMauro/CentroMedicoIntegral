@@ -4,7 +4,13 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+main {
   background: #f4f4f4;
   display: flex;
   justify-content: center;

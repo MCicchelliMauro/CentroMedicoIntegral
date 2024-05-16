@@ -45,6 +45,7 @@ body {
     display: block;
     justify-content: space-between;
     align-content: space-between;
+    position: fixed;
     padding: 1px ;
     background:linear-gradient(to right, #c9f4ec, #37b5a3);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -57,6 +58,8 @@ body {
     -o-border-radius:0.5rem   ;
 }
 
+
+
 .menu_nav {
     display: flex;
     float: right;
@@ -66,6 +69,7 @@ body {
     margin: 0;
     padding: 0.5rem;
     margin-right: 1rem;
+    
     
 }
 

@@ -41,7 +41,12 @@ body {
     -o-transform: translate(0px, 0px) scale(1.1, 1.1);
 }
 .header_div {
-    position: relative;
+    
+        top: 0;
+        
+        /* Esto asegura que la barra de navegación esté siempre en la parte superior de otros elementos */
+    
+    position: fixed;
     display: block;
     justify-content: space-between;
     align-content: space-between;

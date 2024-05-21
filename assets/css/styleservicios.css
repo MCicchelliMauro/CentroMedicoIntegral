@@ -1,0 +1,78 @@
+/*imágenes del carrusel */
+.carousel-item img {
+    width: 100%; 
+    height: auto; 
+  }
+  
+  /* carrusel */
+  .carousel {
+    max-width: 70%; /* Ancho máximo del carrusel */
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    
+    /* Cambia el tamaño del carrusel en pantallas pequeñas */
+    .carousel {
+      max-width: 100%;
+    }
+  }
+
+/* textos de los botones */
+.carousel-control-prev span,
+.carousel-control-next span {
+  font-size: 15px; 
+  
+}
+
+/* Botones de los indicadores de diapositivas */
+.carousel-indicators button {
+    width: 10px; 
+    height: 10px; 
+    padding: 0px; 
+
+    
+  }
+
+.carousel-indicators button {
+    background-color: #37b5a3;
+    border-color:#288678;
+    border-radius: 50%; 
+    background-color: rgb(0, 0, 0,0.5); 
+ }
+
+  /* Botones de control de diapositivas */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 80px; 
+  height: 30px;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #37b5a3;  
+  border-color:#288678;; 
+  color: #010e09; 
+  border-radius: 10px;
+}
+
+.carousel-caption {
+    color: #14e9e9;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; /* Espaciado interno para el texto */
+  }
+
+  h1 {
+    color: #165e58;
+    font-size: 36px; 
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1cm;
+    margin: 1cm;
+    
+  }
+  

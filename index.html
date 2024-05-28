@@ -202,21 +202,18 @@
                     </div>
                   </div>
                 </div>
-      
-      
-      
+           
       
               </div>
             </div>
             
-      
-      
           </div>
         </div>
+
         <section class="section">
+          <h1>Preguntas Frecuentes</h1>
           <section class="faq-section">
-            <h1>Preguntas Frecuentes</h1>
-            
+                        
             <!-- Preguntas para Pacientes -->
             <h2>Pacientes</h2>
             
@@ -254,7 +251,8 @@
                     <p>Puedes consultar la lista de obras sociales y coberturas médicas en nuestro sitio web. Si tu obra social no aparece en la lista, contáctanos telefónicamente para más información.</p>
                 </details>
             </div>
-            
+          </section>
+          <section class="faq-section">
             <!-- Servicios y Procedimientos -->
             <h2>Servicios y Procedimientos</h2>
             
@@ -294,6 +292,8 @@
             </div>
         </section>
         </section>
+
+        
       </div>
     </main>
 
@@ -318,17 +318,26 @@
       </div>
     </footer>
     </div>
+
+    <!-- ? Script Carousel -->
     <script>
       $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-          items: 3,
-          loop: true,
-          margin: 10,
-          autoplay: true,
-          autoplayTimeout: 3000, // 3 seconds
-          autoplayHoverPause: true
-        });
-      });
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 3000, // 3 seconds
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items:1 // En pantallas de 0px a 600px, muestra 1 item
+            },
+            600:{
+                items:3 // En pantallas de 600px en adelante, muestra 3 items
+            }
+        }
+    });
+});
       </script>
 </body>
 

@@ -321,33 +321,7 @@ aside {
         margin: 0 5px;
       }
 
-      /* !Estilos de Faq */
-
-      .faq-section {
-        max-width: 800px;
-        margin: 0 auto;
-        
-    }
-    .faq-item {
-        margin-bottom: 10px;
-    }
-    .faq-item summary {
-        background-color: #f2f2f2;
-        padding: 10px;
-        cursor: pointer;
-        border: 1px solid #ccc;
-    }
-    .faq-item summary:hover {
-        background-color: #e2e2e2;
-    }
-    .faq-item details[open] summary {
-        background-color: #d2d2d2;
-    }
-    .faq-item p {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-top: none;
-    }
+      
 
      /* ! Estilos del reviews */
 
@@ -357,6 +331,8 @@ aside {
 		margin:0 0 0 0;
 		padding:100px 0 120px 0;
 	}
+
+    
 	.reviews h2{
 		text-align:center;
 		color:blueviolet;
@@ -470,3 +446,75 @@ aside {
 		margin-top: 70px;
 	}
 
+/* !Estilos de FAQ */
+
+.section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.faq-section h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+}
+
+.faq-section h2 {
+    margin-top: 20px;
+    color: #666;
+    font-size: 1.5em;
+}
+
+/* ?Estilo de los elementos de preguntas frecuentes */
+.faq-item {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.faq-item details {
+    padding: 15px;
+    cursor: pointer;
+    width: 600px;
+    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+}
+@media screen and (max-width: 790px){
+    .faq-item details {
+        width: 100%;
+    }
+        
+}
+
+.faq-item details:hover {
+    background-color: #d0c9c9;
+}   
+
+.faq-item summary {
+    font-weight: bold;
+    color: #333;
+}
+
+.faq-item p {
+    margin-top: 10px;
+    color: #666;
+}

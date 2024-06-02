@@ -1,78 +1,209 @@
-/*imágenes del carrusel */
+/* Imagens do carrossel */
 .carousel-item img {
-    width: 100%; 
-    height: auto; 
-  }
-  
-  /* carrusel */
-  .carousel {
-    max-width: 70%; /* Ancho máximo del carrusel */
-  }
-  
-  /* Media query para pantallas más pequeñas */
-  @media (max-width: 768px) {
-    
-    /* Cambia el tamaño del carrusel en pantallas pequeñas */
-    .carousel {
-      max-width: 100%;
-    }
-  }
-
-/* textos de los botones */
-.carousel-control-prev span,
-.carousel-control-next span {
-  font-size: 15px; 
-  
-}
-
-/* Botones de los indicadores de diapositivas */
-.carousel-indicators button {
-    width: 10px; 
-    height: 10px; 
-    padding: 0px; 
-
-    
-  }
-
-.carousel-indicators button {
-    background-color: #37b5a3;
-    border-color:#288678;
-    border-radius: 50%; 
-    background-color: rgb(0, 0, 0,0.5); 
- }
-
-  /* Botones de control de diapositivas */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 80px; 
-  height: 30px;
+  width: 100%;
+  height: auto;
 }
 
 
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: #37b5a3;  
-  border-color:#288678;; 
-  color: #010e09; 
+/* Carrossel */
+.carousel {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+
+.carousel {
+  border: 10px solid #288678;
   border-radius: 10px;
 }
 
-.carousel-caption {
-    color: #14e9e9;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 10px; /* Espaciado interno para el texto */
-  }
 
-  h1 {
-    color: #165e58;
-    font-size: 36px; 
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 1cm;
-    margin: 1cm;
-    
+
+
+
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+ 
+  /* Cambia el tamaño del carrusel*/
+  .carousel {
+    max-width: 100%;
   }
-  
+}
+@media (max-width: 768px) {
+  .carousel-caption {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .carousel-caption {
+    font-size: 12px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+}
+/* Botones de los indicadores de diapositivas */
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  padding: 0px;
+
+
+
+
+ 
+}
+
+
+
+
+.carousel-indicators button {
+  background-color:#37b5a3;
+  border-color:#288678;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0,0.5);
+}
+
+
+
+
+/* Botones de control de diapositivas */
+.carousel-control-prev,
+.carousel-control-next {
+width: 80px;
+height: 30px;
+}
+
+
+
+
+
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+background-color: #37b5a3;  
+border-color:#288678;;
+color: #010e09;
+border-radius: 10px;
+}
+
+
+
+
+.carousel-caption {
+  color: #14e9e9;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px; /* Espaciado interno para el texto */
+}
+
+
+#pauseButton, #resumeButton {
+  background-color: #37b5a3;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+
+/* Agregando iconos de Font Awesome */
+#pauseButton::before {
+  content: "\f04c"; /* Ícono de pausa (fa-pause) */
+  font-family: FontAwesome;
+  margin-right: 2px;
+}
+
+
+#resumeButton::before {
+  content: "\f04b"; /* ícono de play(fa-play) */
+  font-family: FontAwesome;
+  margin-right: 2px;
+}
+
+
+/* para alternar el color del boton*/
+#pauseButton:hover, #resumeButton:hover {
+  background-color: #288678;
+}
+
+
+
+
+h1 {
+  color: #165e58;
+  font-size: 36px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1cm;
+  margin: 1cm;
+ 
+}
+
+
+
+
+  .header_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav {
+    margin-left: auto;
+}
+
+
+.menu_nav {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+
+.menu_nav li {
+    display: inline;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+
+/* Para dispositivo mobile */
+@media (max-width: 768px) {
+    .menu_nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        background:#37b5a3;
+    }
+
+
+    #menu-toggle:checked + .hamburger + .menu_nav {
+        display: flex;
+    }
+
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}

@@ -321,8 +321,6 @@ aside {
         margin: 0 5px;
       }
 
-      
-
      /* ! Estilos del reviews */
 
      .reviews{
@@ -331,8 +329,7 @@ aside {
 		margin:0 0 0 0;
 		padding:100px 0 120px 0;
 	}
-
-    
+   
 	.reviews h2{
 		text-align:center;
 		color:blueviolet;
@@ -457,7 +454,6 @@ aside {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .faq-section {
@@ -517,4 +513,39 @@ aside {
 .faq-item p {
     margin-top: 10px;
     color: #666;
+}
+
+/* !Estilos de Seccion obras sociales */
+
+.prestadores {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content:space-evenly;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 1rem;
+    background: linear-gradient(to right, #c9f4ec, #37b5a3);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.prestadores img {
+    max-width: 100%; /* hace responsive las imagenes */
+    height: auto; /* mantiene el aspect ratio */
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    opacity: 0.8;
+
+}
+
+/* cambia la direccion del flex en las pantalllas chicas de fila a columna */
+@media (max-width: 600px) {
+    .prestadores {
+        flex-direction: column;
+    }
 }

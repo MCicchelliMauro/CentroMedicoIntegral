@@ -9,8 +9,8 @@ const mysql = require("mysql2");
 //* 2- Configuracion de la conexión
 const connection = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "123Shikamaru",
+  user: "Poner nombre de usuario de la base ¿root?",
+  password: "poner aca la contraseña de la base de datos",
   port: 3306,
 });
 
@@ -44,17 +44,41 @@ connection.connect((err) => {
       }
       console.log("Conectado a la base de datos users_db");
 
-      const sqlCreateTable = `
-                CREATE TABLE IF NOT EXISTS users (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
-                    apellido VARCHAR(255) NOT NULL,
-                    nombre VARCHAR(255) NOT NULL,
-                    dni INT(8) NOT NULL,
-                    nacimiento DATE NOT NULL,
-                    idobrasocial INT 
-                );
-            `;
+      //* Creamos una tabla obrasocial
+        
+      const sqlCreateTableObraSocial = `
+      CREATE TABLE IF NOT EXISTS obrasocial (
+          idobrasocial INT AUTO_INCREMENT PRIMARY KEY,
+          nombre VARCHAR(255) NOT NULL,
+          descripcion VARCHAR(255) NOT NULL
+      );
+  `;
+      //* Pasamos la consulta
+      connection.query(sqlCreateTableObraSocial, (err, results) => {
+        //* En caso de error
+        if (err) {
+          console.error("Error al crear la tabla: " + err);
+          return;
+        }
+        //* Si todo va bien
+        console.log("Tabla creada o ya existente");
+      });
 
+
+      const sqlCreateTable = `
+      CREATE TABLE IF NOT EXISTS users (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          apellido VARCHAR(255) NOT NULL,
+          nombre VARCHAR(255) NOT NULL,
+          dni INT NOT NULL,
+          nacimiento DATE NOT NULL,
+          idobrasocial INT NOT NULL,
+          CONSTRAINT fk_obrasocial FOREIGN KEY (idobrasocial) REFERENCES obrasocial(idobrasocial)
+      );
+  `;
+
+        
+        
       //* Pasamos la consulta
       connection.query(sqlCreateTable, (err, results) => {
         //* En caso de error

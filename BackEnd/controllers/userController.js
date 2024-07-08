@@ -41,7 +41,7 @@ const getUserById = (req, res) => {
     const { id } = req.params;
 
     //* Creamos la consulta con marcador de posición
-    const sql = 'SELECT * FROM user WHERE id = ?';
+    const sql = 'SELECT * FROM users WHERE id = ?';
 
     //* Los marcadores de posición se utilizan para evitar la inyección de SQL, 
     //* ya que los valores se escapan automáticamente.
@@ -56,23 +56,25 @@ const getUserById = (req, res) => {
     });
 };
 
-//* 4- Método para crear una películaario
+//* 4- Método para crear un usuario
 const createUser = (req, res) => {
     // Desestructuramos la request
     const { apellido, nombre, dni, nacimiento, idobrasocial } = req.body;
+
+    // Convertimos la fecha a un formato aceptado por MySQL (YYYY-MM-DD HH:MM:SS)
+    const nacimientoFormatted = new Date(nacimiento).toISOString().slice(0, 19).replace('T', ' ');
+
     // Creamos la consulta con marcadores de posición
     const sql = 'INSERT INTO users (apellido, nombre, dni, nacimiento, idobrasocial) VALUES (?, ?, ?, ?, ?)';
-    // Pasamos la consulta
-    //.query(consulta, array_con_valores, funcion_callback)
-    db.query(sql, [apellido, nombre, dni, nacimiento, idobrasocial], (err, result) => {
+
+    // Pasamos la consulta con la fecha formateada
+    db.query(sql, [apellido, nombre, dni, nacimientoFormatted, idobrasocial], (err, result) => {
         //en caso de error
         if (err)  {console.log(err); return;} 
         //enviamos mensaje de exito con info del usuario creado
         res.json({ message: 'Usuario creado', userId: result.insertId });
-        
     });
 };
-
 //* 5- Método para modificar un usuario (COMPLETAR)
 
 const updateUser = (req, res) => {
@@ -83,7 +85,7 @@ const updateUser = (req, res) => {
     const { apellido, nombre, dni, nacimiento, idobrasocial } = req.body;
 
     //* Creamos la consulta con marcadores de posición
-    const sql = 'UPDATE user SET apellido = ?, nombre = ?, dni = ?, nacimiento = ?, idobrasocial = ? WHERE id = ?';
+    const sql = 'UPDATE users SET apellido = ?, nombre = ?, dni = ?, nacimiento = ?, idobrasocial = ? WHERE id = ?';
 
     //* Pasamos la consulta
     db.query(sql, [apellido, nombre, dni, nacimiento, idobrasocial, id], (err, result) => {
